@@ -1,11 +1,15 @@
+
+
 let AtaqueJugador  
 let AtaqueEnemigo
 let VidasJugador = 3
 let VidasEnemigo = 3
 
+
+
 function iniciarJuego(){
-    let sectionSelecionarAtaque = document.getElementById('Selecionar-ataque')
-    sectionSelecionarAtaque.style.display = 'none'
+    let sectionSeleccionarAtaque = document.getElementById('Seleccionar-ataque')
+    sectionSeleccionarAtaque.style.display = 'none'
     
     let sectionBotonReiniciar = document.getElementById('reiniciar')
     sectionBotonReiniciar.style.display = 'none'
@@ -26,10 +30,10 @@ function iniciarJuego(){
 }
 
 function SeleccionarMascotaJugador(){
-    let sectionSelecionarAtaque = document.getElementById('Selecionar-ataque')
-    sectionSelecionarAtaque.style.display = 'block'
+    let sectionSeleccionarAtaque = document.getElementById('Seleccionar-ataque')
+    sectionSeleccionarAtaque.style.display = 'flex'
 
-    let sectionElegirMascota =document.getElementById('Selecionar - mascota')
+    let sectionElegirMascota =document.getElementById('Seleccionar-mascota')
     sectionElegirMascota.style.display = 'none'
 
     let inputAlligator = document.getElementById('Alligator')
@@ -103,8 +107,8 @@ function ataqueTierra(){
 }
 
 function AtaqueAleatorioEnemigo(){
-    let ataqueAletorio
-    ataqueAletorio = aleatorio(1,3)
+    let ataqueAletorio = aleatorio(1,3)
+     
     if (ataqueAletorio == 1){
         AtaqueEnemigo = 'Fuego'
     }
@@ -152,23 +156,38 @@ function revisarvidas (){
 }
 
 function crearMensaje (resultado){
-    let sectionMensajes = document.getElementById('mensajes')
-    let parrafo = document.createElement('p')
-    parrafo.innerHTML = 'Tu mascota atacó con '+ AtaqueJugador + ' , las mascotas del enemigo ataco con ' + AtaqueEnemigo + ' / ' + resultado
-    sectionMensajes.appendChild(parrafo)
+    let sectionMensajes = document.getElementById('resultado')
+    let ataquesDelJugador = document.getElementById('ataques-del-jugador')
+    let ataquesDelEnemigo = document.getElementById('ataques-del-enemigo')
+
+    
+    let nuevoAtaqueDelJugador = document.createElement('p')
+    let nuevoAtaqueDelEnemigo = document.createElement('p')
+
+    sectionMensajes.innerHTML = resultado
+    nuevoAtaqueDelJugador.innerHTML = AtaqueJugador
+    nuevoAtaqueDelEnemigo.innerHTML = AtaqueEnemigo
+
+    /* let parrafo = document.createElement('p')
+    parrafo.innerHTML = 'Tu mascota atacó con '+ AtaqueJugador + ' , las mascotas del enemigo ataco con ' + AtaqueEnemigo + ' / ' + resultado */
+    
+    ataquesDelJugador.appendChild(nuevoAtaqueDelJugador)
+    ataquesDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
 }
 
-function crearMensajeFinal (resultadoFianl){
-    let sectionMensajes = document.getElementById('mensajes')
-    let parrafo = document.createElement('p')
-    parrafo.innerHTML = resultadoFianl
-    sectionMensajes.appendChild(parrafo)
+function crearMensajeFinal (resultadoFinal){
+    let sectionMensajes = document.getElementById('resultado')
+    sectionMensajes.innerHTML = resultadoFinal
+
+
     let BotonFuego = document.getElementById('boton-Fuego')
     BotonFuego.disabled = true
     let BotonAgua = document.getElementById('boton-Agua')
     BotonAgua.disabled = true
     let BotonTierra = document.getElementById('boton-Tierra')
     BotonTierra.disabled = true
+    let sectionReiniciar = document.getElementById('reiniciar')
+    sectionReiniciar.style.display = 'block'
 }
 
 function reiniciarJuego(){

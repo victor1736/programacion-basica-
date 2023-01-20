@@ -1,17 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body{
+    font-family: 'Anton', sans-serif;
+    background-image: url(./assets/60339-selva.jpg);
+    background-size: cover;
+}
+
+#Seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .titulo {
-    color: rgb(127, 137, 213);
-    width:  280px;
-    height: 50px;
-    background-color: aqua;
+    color: rgb(22, 19, 19);
+    font-size: 32px;
+    font-family: 'Shadows Into Light', cursive;
+
+}
+.subtitulo{
+    color: rgb(17, 14, 14);
+    font-size: 30px;
 }
 
-label{
-    background-color: tomato;
+
+
+.tarjetas, .tarjetas-ataques{
+    display: flex;
+    gap: 10px;
 }
+
+.tarjeta-de-animales{
+    width: 150px;
+    height: 150px;
+    background: #205295;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    
+}
+
+.tarjeta-de-animales img{
+    width: 80px;
+}
+
+#boton-seleccionar-mascota{
+    width: 180px;
+    height: 30px;
+    border-radius: 20px;
+    background: transparent;
+    border: 3px solid rgb(44, 8, 204);
+    color: rgb(35, 4, 101);
+    font-family: 'Shadows Into Light', cursive;
+    margin-top: 30px;
+}
+
 input{
-    background-color: aquamarine;
+    display: none;
 }
 
-button{
-    background-color: violet;
+input:checked + label  {
+    background-color: #f45d71;
+    width: 200px;
+}
+
+#Seleccionar-ataque{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(26, 24, 24); 
+}
+
+#boton-Fuego{
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 3px solid;
+    font-family: 'Shadows Into Light', cursive;
+    background-image: url(./assets/fuego.jpg);
+    background-size: 120%;
+}
+
+#boton-Agua{
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 3px solid;
+    font-family: 'Shadows Into Light', cursive;
+    background-image: url(./assets/agua.jpg);
+    background-size: 120%;
+}
+
+#boton-Tierra{
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 3px solid;
+    font-family: 'Shadows Into Light', cursive;
+    background-image: url(./assets/tierra.jpg);
+    background-size: cover;
+}
+
+#mensajes{
+    width: 280px;
+    background-image: url(./assets/60149-selva.jpg);
+    background-size: 90%;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: aliceblue;
+    
+}
+
+#boton-Reiniciar {
+
+  border: none;
+  color: #0667ef;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 20px;
+}
+
+.ataques{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    color: rgb(255, 0, 0);
+}
+
+.ataques-jugador, .ataques-enemigo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+@media (max-whidth: 360px){
+    .tarjetas,.tarjetas-ataques{
+    flex-direction: column;
+    }
 }

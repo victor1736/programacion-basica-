@@ -3,47 +3,88 @@
     <head>
         <meta charset="utf-8" />
         <title>DEMON! </title>
-        <script src="./js/demo.js"></script>
+        
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-        <h1 class="titulo">DEMON! 🔥💧🌿</h1>
-        <section id="Selecionar - mascota">
-            <h2>Elige tu mascota:</h2>
-                <label for="Alligator">Alligator --> Agua y Tierra</label>
-                <input type="radio" name="mascota" id="Alligator"/><br>
-                <label for="Cow">Cow       --> Tierra</label>
-                <input type="radio" name="mascota" id="Cow"/><br>
-                <label for="Piton">Piton     --> Fuego y Tierra</label>
-                <input type="radio" name="mascota" id="Piton"/><br>
-                <label for="Gatosauros">Gatosauros--> Tierra y Fuego</label>
-                <input type="radio" name="mascota" id="Gatosauros"/><br>
-                <label for="Colibri">Colibri   --> Agua y Tierra</label>
-                <input type="radio" name="mascota" id="Colibri"/><br>
-                <label for="Porcus">Porcus    --> Fuego y Agua</label>
-                <input type="radio" name="mascota" id="Porcus"/><br>
+        
+        <section id="Seleccionar-mascota">
+            <h1 class="titulo">🔥💧🌿 ANIMALES SALVAJES 🔥💧🌿</h1>
+            <h2 class="subtitulo">Elige tu mascota:</h2>
 
-            <button id="boton-seleccionar-mascota">Seleccionar</button>
+            <div class="tarjetas">
+
+                <input type="radio" name="mascota" id="Alligator"/>
+                <label class="tarjeta-de-animales" for="Alligator">
+                    <p>Alligator</p>
+                    <img src="./assets/cocodrilol.jpg.png" alt="alligator">
+                </label>
+                
+                <input type="radio" name="mascota" id="Cow"/>
+                <label class="tarjeta-de-animales" for="Cow">
+                    <p>Cow</p>
+                    <img src="./assets/vaca.jpg" alt="cow">
+                </label>
+                
+                <input type="radio" name="mascota" id="Piton"/>
+                <label class="tarjeta-de-animales" for="Piton">
+                    <p>Piton </p>
+                    <img src="./assets/piton.jpg" alt="piton">
+                </label>
+                
+                <input type="radio" name="mascota" id="Gatosauros"/>
+                <label class="tarjeta-de-animales" for="Gatosauros">
+                    <p>Gatosauros </p>
+                    <img src="./assets/gato.jpg" alt="gatosauros">
+                </label>
+                
+                <input type="radio" name="mascota" id="Colibri"/>
+                <label class="tarjeta-de-animales" for="Colibri">
+                    <p>Colibri </p>
+                    <img src="./assets/colibri.jpg"  alt="colibri">
+                </label>
+                
+                <input type="radio" name="mascota" id="Porcus"/> 
+                <label class="tarjeta-de-animales" for="Porcus">
+                    <p>Porcus </p>
+                    <img src="./assets/cerdo.jpg" alt="porcus">
+                </label>
+                             
+            </div>
+
+
+        <button id="boton-seleccionar-mascota">Seleccionar</button>
         </section>
-        <section id="Selecionar-ataque">
-            <h2>Elige tu ataque:</h2>
-            <p>Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p>
-            <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>
-            <p>
-                <button id="boton-Fuego">Fuego 🔥</button>
-                <button id="boton-Agua">Agua 💧</button>
-                <button id="boton-Tierra">Tierra 🌿</button>
-            </p>            
+        <section id="Seleccionar-ataque">
+            <h1 class="titulo">🔥💧🌿 ANIMALES SALVAJES 🔥💧🌿</h1>
+            <h2 class="subtitulo">Elige tu ataque:</h2>
+
+            <div class="tarjetas-ataques">
+                <button id="boton-Fuego"></button>
+                <button id="boton-Agua"></button>
+                <button id="boton-Tierra"></button>
+            </div> 
+
+            <div id="mensajes">
+                <p id="resultado">Mucha suerte</p>   
+                <section id="reiniciar">
+                    <button id="boton-Reiniciar">Reiniciar</button>
+                </section>
+            </div>   
+            <div class="ataques">
+                <div class="ataques-jugador">
+                    <p id="vidas-jugador">3</p>
+                    <p id="mascota-jugador"></p>
+                    <div id="ataques-del-jugador"></div>
+                </div>
+                <div class="ataques-enemigo">
+                    <p id="vidas-enemigo">3</p>
+                    <p id="mascota-enemigo"></p>
+                    <div id="ataques-del-enemigo"></div>  
+                </div>
+            </div>
         </section>
 
-        <section id="mensajes">
-            
-        </section>
-
-        <section id="reiniciar">
-            <button id="boton-Reiniciar">Reiniciar</button>
-
-        </section>
-
+        <script src="./js/demo.js"></script>
     </body>
 </html>
